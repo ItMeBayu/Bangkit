@@ -103,12 +103,20 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Dapatkan nama kolom pada indeks yang ditentukan
-column_name = all_df.columns[1]
+num_columns = len(all_df.columns)
 
-# Tampilkan nama kolom
-st.write("Nama Kolom pada Indeks", index_to_display, ":", column_name)
+# Indeks kolom yang ingin ditampilkan
+index_to_display = 1  # Ganti dengan indeks kolom yang Anda inginkan
 
+# Periksa apakah indeks yang diminta valid
+if index_to_display < num_columns:
+    # Dapatkan nama kolom pada indeks yang ditentukan
+    column_name = all_df.columns[index_to_display]
+    # Tampilkan nama kolom
+    st.write("Nama Kolom pada Indeks", index_to_display, ":", column_name)
+else:
+    st.write("Indeks kolom yang diminta tidak valid. DataFrame hanya memiliki", num_columns, "kolom.")
+    
 datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
 all_df['order_purchase_timestamp'] = pd.to_datetime(all_df['order_purchase_timestamp'])
 all_df.sort_values(by="order_purchase_timestamp", inplace=True)
