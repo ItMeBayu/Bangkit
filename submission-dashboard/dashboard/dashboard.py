@@ -102,10 +102,9 @@ st.markdown(
     f"<h1 style='text-align:center;'>Project Dashboard Danu</h3>", 
     unsafe_allow_html=True
 )
-index_to_display = 0  # Ganti dengan indeks kolom yang Anda inginkan
 
 # Dapatkan nama kolom pada indeks yang ditentukan
-column_name = all_df.columns[index_to_display]
+column_name = all_df.columns[1]
 
 # Tampilkan nama kolom
 st.write("Nama Kolom pada Indeks", index_to_display, ":", column_name)
