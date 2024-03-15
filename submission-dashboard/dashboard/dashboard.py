@@ -102,7 +102,8 @@ st.markdown(
     f"<h1 style='text-align:center;'>Project Dashboard Danu</h3>", 
     unsafe_allow_html=True
 )
-st.markdown(all_df.columns)
+st.write("Semua Kolom pada Dataset:")
+st.write(all_df.columns)
 datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
 all_df['order_purchase_timestamp'] = pd.to_datetime(all_df['order_purchase_timestamp'])
 all_df.sort_values(by="order_purchase_timestamp", inplace=True)
