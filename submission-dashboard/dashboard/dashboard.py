@@ -96,7 +96,7 @@ def rfm_analysis_city(df):
     return rfm_df
 
 
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("submission-dashboard/dashboard/all_data.csv")
 
 st.markdown(
     f"<h1 style='text-align:center;'>Project Dashboard Danu</h3>", 
