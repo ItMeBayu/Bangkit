@@ -106,7 +106,7 @@ st.markdown(
 num_columns = len(all_df.columns)
 
 # Indeks kolom yang ingin ditampilkan
-index_to_display = 1  # Ganti dengan indeks kolom yang Anda inginkan
+index_to_display = 0  # Ganti dengan indeks kolom yang Anda inginkan
 
 # Periksa apakah indeks yang diminta valid
 if index_to_display < num_columns:
