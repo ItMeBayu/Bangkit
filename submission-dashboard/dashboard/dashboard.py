@@ -104,8 +104,7 @@ st.markdown(
 )
 
 datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
-all_df.sort_values(by="order_purchase_timestamp", inplace=True)
-all_df.reset_index(inplace=True)
+all_df.sort_values(by="order_purchase_timestamp").reset_index(inplace=True)
  
 for column in datetime_columns:
     all_df[column] = pd.to_datetime(all_df[column])
