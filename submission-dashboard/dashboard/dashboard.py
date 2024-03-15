@@ -106,7 +106,7 @@ column_names = all_df.columns.tolist()
 
 # Tampilkan semua nama kolom
 st.write("Semua Kolom pada Dataset:")
-st.write(column_names)
+st.write(column_names[2])
 
 datetime_columns = ["order_purchase_timestamp", "order_delivered_customer_date"]
 all_df['order_purchase_timestamp'] = pd.to_datetime(all_df['order_purchase_timestamp'])
